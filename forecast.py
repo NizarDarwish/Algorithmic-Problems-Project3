@@ -29,10 +29,11 @@ test_set = []
 
 for i in range(0, n):
   training_set.append(df.iloc[i, 1:int(0.8*df.shape[1])].values)
-  test_set.append(df.iloc[i, 1:int(0.2*df.shape[1])].values)
+  test_set.append(df.iloc[i, int(0.8*df.shape[1]):].values)
   
 # Feature Scaling
 sc = MinMaxScaler(feature_range = (0, 1))
+
 
 training_set_scaled = sc.fit_transform(training_set)
 
@@ -50,19 +51,62 @@ for timetable in range(0, n):
     
     timetables[timetable] = [X_train, y_train]
 
+print(timetables[0][0].shape[1])
+print(timetables[1][0].shape[1])
+
 model = Sequential()#Adding the first LSTM layer and some Dropout regularisation
-model.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train.shape[1], 1)))
+model.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train.shape[1], 1) )) #(timetables[time_series][0].shape[1], 1)
+
 model.add(Dropout(0.2))# Adding a second LSTM layer and some Dropout regularisation
+
 model.add(LSTM(units = 50, return_sequences = True))
+
 model.add(Dropout(0.2))# Adding a third LSTM layer and some Dropout regularisation
+
 model.add(LSTM(units = 50, return_sequences = True))
+
 model.add(Dropout(0.2))# Adding a fourth LSTM layer and some Dropout regularisation
+
 model.add(LSTM(units = 50))
+
 model.add(Dropout(0.2))# Adding the output layer
+
 model.add(Dense(units = 1))
 
 # Compiling the RNN
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
+for time_series in range(0, n):
 # Fitting the RNN to the Training set
-model.fit(X_train, y_train, epochs = 100, batch_size = 32)
+  model.fit(timetables[time_series][0],timetables[time_series][1], epochs = 2, batch_size = 50)
+
+full_set = []
+for i in range(0, n):
+  training_set.extend(test_set)
+  inputs = training_set[len(training_set) - len(test_set) - 10:].values
+  inputs = inputs.reshape(-1,1)
+
+  # #full_set.append(df.iloc[i, 1:].values)
+  # inputs = df.iloc[i, 1:]
+  # # print(len(inputs))
+  # # print(len(test_set))
+  # inputs = inputs[len(inputs) - len(test_set[i]) - 10:].values
+  # #inputs = inputs.reshape(-1,1)
+  # full_set.append(inputs)
+
+# print(len(full_set))
+# print(len(full_set[0]))
+# print(len(full_set[1]))
+test_set_scaled = sc.transform(inputs)
+
+# Creating a data structure with 60 time-steps and 1 output
+timetables_test = {}
+for timetable in range(0, n):
+    X_test = []
+    for i in range(10, int(0.2*df.shape[1] - 1)):
+        X_test.append(test_set_scaled[timetable, i-10:i])
+    X_test= np.array(X_test)
+
+    X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
+    
+    timetables_test[timetable] = X_test
