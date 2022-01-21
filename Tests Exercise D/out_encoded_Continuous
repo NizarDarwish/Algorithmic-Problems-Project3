@@ -1,0 +1,91 @@
+Query: wy
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: mas
+True Nearest neighbor: ebay
+distanceApproximate: 6.09887
+distanceTrue: 5.19455
+
+
+Query: x
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: admp
+True Nearest neighbor: bb
+distanceApproximate: 91.7405
+distanceTrue: 39.2534
+
+
+Query: xel
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: ben
+True Nearest neighbor: pgr
+distanceApproximate: 16.4196
+distanceTrue: 5.60433
+
+
+Query: xl
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: bk
+True Nearest neighbor: snv
+distanceApproximate: 60.4237
+distanceTrue: 18.2139
+
+
+Query: xlnx
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: ccl
+True Nearest neighbor: aep
+distanceApproximate: 15.5385
+distanceTrue: 6.98454
+
+
+Query: xom
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: etr
+True Nearest neighbor: chrw
+distanceApproximate: 16.2383
+distanceTrue: 14.2205
+
+
+Query: xray
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: pki
+True Nearest neighbor: pcg
+distanceApproximate: 12.3889
+distanceTrue: 6.50688
+
+
+Query: xrx
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: jhg
+True Nearest neighbor: nem
+distanceApproximate: 18.7294
+distanceTrue: 14.5874
+
+
+Query: yum
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: msft
+True Nearest neighbor: pki
+distanceApproximate: 10.8094
+distanceTrue: 9.09377
+
+
+Query: zbh
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: mco
+True Nearest neighbor: ups
+distanceApproximate: 31.0641
+distanceTrue: 17.8427
+
+
+Query: zion
+Algorithm: LSH_Frechet_Continuous
+Approximate Nearest neighbor: tgt
+True Nearest neighbor: hig
+distanceApproximate: 35.3011
+distanceTrue: 12.2377
+
+
+tApproximateAverage: 0.359872 seconds
+tTrueAverage: 9.18948 seconds
+MAF: 3.31745

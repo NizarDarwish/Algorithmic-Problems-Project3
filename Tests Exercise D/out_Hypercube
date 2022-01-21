@@ -1,0 +1,91 @@
+Query: wy
+Algorithm: Hypercube
+Approximate Nearest neighbor: ca
+True Nearest neighbor: ca
+distanceApproximate: 196.352
+distanceTrue: 196.352
+
+
+Query: x
+Algorithm: Hypercube
+Approximate Nearest neighbor: rig
+True Nearest neighbor: rig
+distanceApproximate: 948.216
+distanceTrue: 948.216
+
+
+Query: xel
+Algorithm: Hypercube
+Approximate Nearest neighbor: t
+True Nearest neighbor: t
+distanceApproximate: 211.418
+distanceTrue: 211.418
+
+
+Query: xl
+Algorithm: Hypercube
+Approximate Nearest neighbor: sti
+True Nearest neighbor: sti
+distanceApproximate: 561.222
+distanceTrue: 561.222
+
+
+Query: xlnx
+Algorithm: Hypercube
+Approximate Nearest neighbor: a
+True Nearest neighbor: snps
+distanceApproximate: 328.128
+distanceTrue: 307.226
+
+
+Query: xom
+Algorithm: Hypercube
+Approximate Nearest neighbor: slb
+True Nearest neighbor: slb
+distanceApproximate: 586.457
+distanceTrue: 586.457
+
+
+Query: xray
+Algorithm: Hypercube
+Approximate Nearest neighbor: pcg
+True Nearest neighbor: pcg
+distanceApproximate: 274.728
+distanceTrue: 274.728
+
+
+Query: xrx
+Algorithm: Hypercube
+Approximate Nearest neighbor: kss
+True Nearest neighbor: kss
+distanceApproximate: 627.702
+distanceTrue: 627.702
+
+
+Query: yum
+Algorithm: Hypercube
+Approximate Nearest neighbor: tmk
+True Nearest neighbor: gis
+distanceApproximate: 415.387
+distanceTrue: 403.546
+
+
+Query: zbh
+Algorithm: Hypercube
+Approximate Nearest neighbor: vmc
+True Nearest neighbor: ups
+distanceApproximate: 1202.99
+distanceTrue: 669.383
+
+
+Query: zion
+Algorithm: Hypercube
+Approximate Nearest neighbor: sti
+True Nearest neighbor: sti
+distanceApproximate: 445.729
+distanceTrue: 445.729
+
+
+tApproximateAverage: 0.00125125 seconds
+tTrueAverage: 0.00334365 seconds
+MAF: 1.79716
